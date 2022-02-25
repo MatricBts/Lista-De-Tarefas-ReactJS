@@ -8,7 +8,7 @@ type Props={
 
 export const ListItem = ({ item }: Props) => {
     const [isChecked, setIsChecked] = useState(item.done) // A STATE ISCHECKED RECEBE O DONE DO OBJETO ITEM
-
+    
     return(
         <C.Container done ={isChecked}>
             <input type="checkbox"
@@ -16,6 +16,8 @@ export const ListItem = ({ item }: Props) => {
             onChange= { e => setIsChecked( e.target.checked )} // PASSA COMO TRUE SE TIVER CHECK O CAMPO, E FALSE SE N TIVER
             />
             <label>{item.name}</label>
+            <button>Editar</button>
+            <button>Apagar</button>
         </C.Container>       
     );
 }

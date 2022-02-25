@@ -1,4 +1,6 @@
+import { Item } from "./item";
 export { clientesStorage,  buscaStorage };
+
 
 
 // AÇÃO DE BUSCAR OS CLIENTES SALVOS NO SOTRAGE
@@ -9,14 +11,14 @@ const buscaStorage = () =>{
     }
     else{ // SE TIVER ALGO ELE RETORNA AS INFORMAÇÕES QUE ESTÃO LÁ 
     
-        return console.log( localStorage.getItem( 'tarefas' ))
+        console.log( localStorage.getItem( 'tarefas' ))
         // NO STORAGE É SALVO COMO STRING, A GENTE TRAZ COMO ARRAY DE OBJETO PARA A GENTE PODER TRABALHAR
         // POR ISSO O JSON.PARSE
     }     
 }
 
 // AÇÃO DE MANDAR UM CLIENTE NOVO PRO STORAGE
-export const salvaStorage = ( info: string ) =>{
+export const salvaStorage = ( info: Item[] ) =>{
     localStorage.setItem('tarefas', JSON.stringify( info ))
 }
 

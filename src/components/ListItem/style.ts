@@ -23,5 +23,9 @@ export const Container = styled.div(( {done}: ContainerProps )=>(
         color: #CCC;
         text-decoration: ${ done ? 'line-through' : 'initial' }
     }
+
+    button{
+        position: right;
+    }
 `
 ));

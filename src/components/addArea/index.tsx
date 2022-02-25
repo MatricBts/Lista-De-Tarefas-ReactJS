@@ -1,6 +1,6 @@
 import { useState, KeyboardEvent } from 'react'
 import * as C from './styles'
-import { buscaStorage, salvaStorage  } from '../../types/storage';
+
 
 type Props = { //CRIANDO PROPS
     onEnter: ( nomeTarefa:string ) => void // DECLARA QUE ONENTERÉ UMA FUNÇÃO QUE RETORNA NADA
@@ -16,7 +16,7 @@ export const AddArea = ( {onEnter}:Props ) => {
         if(e.code === 'Enter' && inputText !== ''){
             onEnter( inputText );
             setInputText('');
-            salvaStorage(inputText);
+            
             console.log( tese )
         }
     }
@@ -30,6 +30,7 @@ export const AddArea = ( {onEnter}:Props ) => {
                 value={ inputText }
                 onChange={ e => setInputText( e.target.value ) }
                 onKeyUp={ pegaTecla } // QUANDO DIGITA E SOLTA A TECLA ELE EXECUTA A FUNÇÃO
+                
             />
         </C.Container>
     )

@@ -3,8 +3,11 @@ import * as C from './App.styles'
 import { Item } from './types/item';
 import { ListItem } from './components/ListItem';
 import { AddArea } from './components/addArea';
+import { buscaStorage, salvaStorage  } from './types/storage';
 
 const App = () => {
+
+  let teste = localStorage.getItem( 'tarefas' );
 
   const[ list, setList ] = useState<Item[]>([ // O STATE RECEBE ITEM COMO CLASS, PODENDO MODELAROS OBJETOS
     { id: 1, name: 'Comprar Pão', done: false},
@@ -18,7 +21,8 @@ const App = () => {
       name: nomeTarefa,
       done:false
     })
-
+    console.log(teste)
+    salvaStorage(listaReserva);
     setList(listaReserva)
   }
 
@@ -31,7 +35,8 @@ const App = () => {
         <AddArea onEnter={adicionaTarefa} />
 
         {list.map( ( item, index ) =>(
-          <ListItem key={index} item={item}/>
+          <ListItem key={index} item={item} />
+          
         ))}
         
 
