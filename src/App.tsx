@@ -17,15 +17,16 @@ const App = () => {
       name: nomeTarefa,
       done:false
     })
+
     salvaStorage(listaReserva);
     console.log(listaReserva);
+    setList(listaReserva);
   }
 
   return(
     <C.Container>
       <C.Area>
         <C.Header>Lista de Tarefas</C.Header>
-        
 
         <AddArea onEnter={ adicionaTarefa } />
 
