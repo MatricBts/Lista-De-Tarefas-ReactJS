@@ -17,9 +17,8 @@ const App = () => {
       name: nomeTarefa,
       done:false
     })
-    //salvaStorage(listaReserva)
-    console.log(listaReserva)
-    setList(listaReserva)
+    salvaStorage(listaReserva);
+    console.log(listaReserva);
   }
 
   return(
