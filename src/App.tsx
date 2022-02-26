@@ -7,13 +7,9 @@ import { buscaStorage, salvaStorage  } from './types/storage';
 
 const App = () => {
 
-  let teste = localStorage.getItem( 'tarefas' );
+  const[ list, setList ] = useState<Item[]>(buscaStorage());
 
-  const[ list, setList ] = useState<Item[]>([ // O STATE RECEBE ITEM COMO CLASS, PODENDO MODELAROS OBJETOS
-    { id: 1, name: 'Comprar Pão', done: false},
-    { id: 2, name: 'Comprar Cuzcuz', done: false}
-  ]);
-
+  console.log( 'lista ' , list )
   const adicionaTarefa = ( nomeTarefa: string) => {
     let listaReserva = [...list];
     listaReserva.push({
@@ -21,8 +17,8 @@ const App = () => {
       name: nomeTarefa,
       done:false
     })
-    console.log(teste)
-    salvaStorage(listaReserva);
+    //salvaStorage(listaReserva)
+    console.log(listaReserva)
     setList(listaReserva)
   }
 
@@ -32,7 +28,7 @@ const App = () => {
         <C.Header>Lista de Tarefas</C.Header>
         
 
-        <AddArea onEnter={adicionaTarefa} />
+        <AddArea onEnter={ adicionaTarefa } />
 
         {list.map( ( item, index ) =>(
           <ListItem key={index} item={item} />

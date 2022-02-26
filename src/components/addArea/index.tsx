@@ -17,7 +17,7 @@ export const AddArea = ( {onEnter}:Props ) => {
             onEnter( inputText );
             setInputText('');
             
-            console.log( tese )
+            // console.log( tese )
         }
     }
 
