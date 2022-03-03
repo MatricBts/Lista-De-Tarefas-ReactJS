@@ -1,4 +1,4 @@
-Git Pages: ** https://matricbts.github.io/Lista-De-Tarefas-ReactJS/  **
+Confira como ficou o trabalho acessando o link : ** https://matricbts.github.io/Lista-De-Tarefas-ReactJS/  **
 
 # Getting Started with Create React App
 
