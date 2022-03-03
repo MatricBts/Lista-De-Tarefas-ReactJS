@@ -20,4 +20,16 @@ export const Container = styled.div `
         font-size: 18px;
         flex: 1;
     }
+    
+    button{
+        border-radius: 5px;
+        background-color: #20212C;
+        color: #FFF;
+        outline: 0;
+    }
+
+    button:hover{
+        background-color: #FFF;
+        color: #20212C;
+    }
 `;

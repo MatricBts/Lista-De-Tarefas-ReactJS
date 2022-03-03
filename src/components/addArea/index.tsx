@@ -11,14 +11,18 @@ export const AddArea = ( {onEnter}:Props ) => {
     let [ tese, setTese ] = useState( localStorage.getItem( 'tarefas' ) )
 
 
-    const pegaTecla = (e: KeyboardEvent) => {
+    // const pegaTecla = (e: KeyboardEvent) => {
 
-        if(e.code === 'Enter' && inputText !== ''){
-            onEnter( inputText );
-            setInputText('');
+    //     if(e.code === 'Enter' && inputText !== ''){
+    //         onEnter( inputText );
+    //         setInputText('');
             
-            // console.log( tese )
-        }
+    //         // console.log( tese )
+    //     }
+    // }
+
+    const teste = () => {
+        onEnter( inputText );
     }
 
     return(
@@ -29,9 +33,13 @@ export const AddArea = ( {onEnter}:Props ) => {
                 placeholder='Adicione uma tarefa'
                 value={ inputText }
                 onChange={ e => setInputText( e.target.value ) }
-                onKeyUp={ pegaTecla } // QUANDO DIGITA E SOLTA A TECLA ELE EXECUTA A FUNÇÃO
+                // onKeyUp={ pegaTecla } // QUANDO DIGITA E SOLTA A TECLA ELE EXECUTA A FUNÇÃO
                 
             />
+
+            <button onClick={teste}>
+                Salvar
+            </button>
         </C.Container>
     )
 }
