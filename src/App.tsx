@@ -12,7 +12,7 @@ const App = () => {
   console.log( 'lista ' , list )
   const adicionaTarefa = ( nomeTarefa: string) => {
     let listaReserva = [...list];
-    listaReserva.push({
+    listaReserva.unshift({
       id: list.length +1,
       name: nomeTarefa,
       done:false
